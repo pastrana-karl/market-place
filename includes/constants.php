@@ -2,7 +2,7 @@
     session_start();
 	ob_start();
 
-    define('SITEURL','http://localhost/Market/');
+    define('SITEURL','https://market-p.herokuapp.com/');
     // define('LOCALHOST', 'localhost');
     // define('DB_USERNAME', 'root');
     // define('DB_PASSWORD', '');
