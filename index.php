@@ -76,40 +76,40 @@
             <div class="mustTry">
                 <h1>Look Out For These <span>Products</span></h1>
             </div>
-			<?php //sql to tbl_product where featured = 'yes'
-				$sql = "SELECT * FROM tbl_product WHERE featured = 'Yes'";
-				$res = mysqli_query($conn, $sql);
-				$count = mysqli_num_rows($res);
+			<!-- <?php //sql to tbl_product where featured = 'yes'
+				// $sql = "SELECT * FROM tbl_product WHERE featured = 'Yes'";
+				// $res = mysqli_query($conn, $sql);
+				// $count = mysqli_num_rows($res);
 				
-				if($count > 0){
-					while($row = mysqli_fetch_assoc($res)){
-						$category_id = $row['id'];
-						$prod_title = $row['title'];
-						$image_name = $row['image_name'];
-						?>
-						<a href="<?php echo SITEURL; ?>menu.php#<?php echo $category_id; ?>" id="popular">
-							<div class="box-3 float-container">
-								<?php 
-									if($image_name ==""){
-										echo "<div style='color:red;'>No Image Available</div>";
-									}
-									else{
-										?>
-										<img src="<?php echo SITEURL; ?>img/<?php echo $image_name?>" alt="<?php echo $prod_title; ?>" class="img-responsive img-curve">
+				// if($count > 0){
+				// 	while($row = mysqli_fetch_assoc($res)){
+				// 		$category_id = $row['id'];
+				// 		$prod_title = $row['title'];
+				// 		$image_name = $row['image_name'];
+				// 		?>
+				// 		<a href="<?php echo SITEURL; ?>menu.php#<?php echo $category_id; ?>" id="popular">
+				// 			<div class="box-3 float-container">
+				// 				<?php 
+				// 					if($image_name ==""){
+				// 						echo "<div style='color:red;'>No Image Available</div>";
+				// 					}
+				// 					else{
+				// 						?>
+				// 						<img src="<?php echo SITEURL; ?>img/<?php echo $image_name?>" alt="<?php echo $prod_title; ?>" class="img-responsive img-curve">
 
-										<?php
-									}
-								?>
-								<h3 class="float-text text-white"><?php echo $prod_title; ?></h3>
-							</div>
-						</a>
-						<?php
-					}
-				}
-				else{
-					echo "<div style='color:red;'> No Featured Product</div>";
-				}
-			?>
+				// 						<?php
+				// 					}
+				// 				?>
+				// 				<h3 class="float-text text-white"><?php echo $prod_title; ?></h3>
+				// 			</div>
+				// 		</a>
+				// 		<?php
+				// 	}
+				// }
+				// else{
+				// 	echo "<div style='color:red;'> No Featured Product</div>";
+				// }
+			?> -->
             <div class="clearfix"></div>
         </div>
     </section>
@@ -120,6 +120,6 @@
         </p>
     </section>
 
-    <?php include('./includes/footer.php'); ?>
+    <?php include('includes/footer.php'); ?>
 </body>
 
