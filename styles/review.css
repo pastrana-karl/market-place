@@ -1,0 +1,522 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video
+{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body
+{
+    line-height:1;
+
+
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section
+{
+    display:block;
+}
+
+nav ul
+{
+    list-style:none;
+}
+
+blockquote, q
+{
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after
+{
+    content:'';
+    content:none;
+}
+
+a
+{
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins
+{
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark
+{
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del
+{
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title]
+{
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table
+{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr
+{
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select
+{
+    vertical-align:middle;
+}
+
+/* Enter CODE --------------------------------------------------- */
+*  {
+    text-decoration: none !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+header {
+    grid-area: nav;
+    background-color: #E8E8E8;
+}
+
+main {
+    grid-area: main;
+}
+/*Navbar Responsive------------------------------------*/
+.container {
+	position: relative;
+	margin-top: 100px;
+}
+.container img {
+	display: block;
+	width: 100%;
+}
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 10px 5%;
+	height: 100px;
+	background-color: #df8844;
+}
+nav .logo {
+	float: left;
+	width: 100px;
+	height: 100%;
+	margin-right: 2rem;
+	display: flex;
+	align-items: center;
+	color: #979797;
+}
+nav .logo a{
+    display: none;
+}
+
+nav .links {
+	float: left;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links a {
+	display: block;
+	padding: 1.7em;
+	font-size: 30px;
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: white;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+
+nav ul li a:hover{
+	color: #b65408;
+}
+@media screen and (max-width: 768px) {
+  nav{
+    height: 70px;
+  }
+  nav .logo a{
+    display: contents;
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    color: #979797;
+    text-decoration: none;
+  }
+
+  nav .logo {
+    width: 70px;
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 10;
+		left: 0;
+		right: 0;
+		top: 90px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(32, 32, 32);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+}
+
+/*End of navbar*/
+/*reviews content ------------------------------*/
+
+.reviews-container{
+  width: 100%;
+  height: 400px;
+}
+.round-container-reviews{
+  margin-top: 15px;
+  width: 80%;
+  height: 150px;
+  outline-style: solid;
+  outline-color: #b65408;
+  outline-width: 5px;
+  color: black;
+  background-color: white;
+  border-radius: 25px;
+}
+
+
+
+/*Submission box------------------------------*/
+
+.submission-box-container{
+  padding-top: 10px;
+  width: 100%;
+  height: 290px;
+  background-color: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 30px;
+  box-shadow:0px 0px 5px rgb(177, 177, 177);
+  box-sizing: border-box;
+}
+.form-container{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.comment-heading{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*-CONTAINER OF REVIEWER-----------------------------*/
+.round-container-reviews{
+  width: 70%;
+  padding-top: 300px;
+  height: max-content;
+  margin: 1.25rem auto;
+  padding: 30px 20px 20px;
+
+}
+/*-NAME OF REVIEWER-----------------------------*/
+.reviewerName{
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+/*-RATE OF REVIEWER-----------------------------*/
+.reviewerRate{
+  margin:10px 0 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  width: fit-content;
+  padding: 5px 20px;
+  outline-style: solid;
+  outline-color: #b65408;
+  outline-width: 5px;
+  background-color: white;
+  border-radius: 25px;
+}
+.rating{
+  margin-bottom: 10px;
+}
+.container-rating {
+  cursor: pointer;
+  font-size: 13px;
+}
+
+input[type=radio]{
+  width: 20px;
+  height: 20px;
+  margin: 0 0 2px 0;
+}
+.cotainerbox{
+  display: inline-block;
+  width: max-content;
+  margin-right: 20px;
+}
+
+
+/*-COMMENT OF REVIEWER-----------------------------*/
+.reviewerComment{
+  font-size: 17px;
+  color: black;
+}
+.reviws-padding{
+  padding-bottom: 300px;
+}
+
+input[type=text], select, textarea {
+
+  width: 60%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+
+}
+textarea{
+  margin-top: 5px;
+  resize: none;
+
+}
+
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.col-75 {
+  float: left;
+  width: 80%;
+  margin-top: 6px;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.submitBtn {
+  width: 100px;
+  background: white;
+  color: black;
+  outline-style: solid;
+  outline-color: #b65408;
+  outline-width: 5px;
+  padding: 10px 20px;
+  margin: 8px 0;
+  margin-left: 8px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  float: right;
+  text-align: center;
+}
+
+.comment-btn{
+  margin-right: 18%;
+}
+
+
+
+/*Footer---------------------------------------*/
+footer {
+  position: fixed;
+  grid-area: footer;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  background: #b65408;
+  text-align: center;
+  color: white;
+}
+/*For ipad and mobile---------------------------------------*/
+@media only screen and (max-width: 1000px) {
+  .reviewerName{
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .reviewerComment{
+    font-size: 15px;
+  }
+  .sumbitBtn {
+    width: 80px;
+    padding: 8px 13px;
+  }
+  .clearBtn {
+    width: 80px;
+    padding: 8px 13px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .submission-box-container{
+    height: 300px;
+  }
+  .comment-heading{
+    font-size: 15px;
+  }
+  .container-rating {
+    cursor: pointer;
+    font-size: 11px;
+  }
+  input[type=radio]{
+    width: 16px;
+    height: 16px;
+    margin: 0 0 2px 0;
+  }
+  .cotainerbox{
+    display: inline-block;
+    width: 100px;
+    margin-right: 20px;
+  }
+  .sumbitBtn {
+    width: 60px;
+    padding: 5px 7px;
+  }
+  .clearBtn {
+    width: 60px;
+    padding: 5px 7px;
+  }
+
+  .col-25 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .col-75 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    font-size: 11px;
+    padding-right: 10px;
+
+  }
+
+
+  footer {
+    position: fixed;
+    grid-area: footer;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    background: #b65408;
+    text-align: center;
+    color: white;
+  }
+}

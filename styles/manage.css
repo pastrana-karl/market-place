@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #8b4000;
+  color: #f2f2ff;
+}
+
+.menu ul li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #f2f2ff;
+  }
+  
+  .menu ul li a:hover {
+	  color: #fad5a5;
+  }
+
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  text-align: center;
+  background-color: #f2910d;
+}
+
+
+.menu {
+	border-bottom: 1px solid grey;
+}
+.menu ul {
+	list-style-type: none;
+}
+.menu ul li {
+	display: inline;
+	padding: 1%;
+}
+
+.textcenter {
+	text-align: center;
+}
+
+.wrapper {
+	/*border: 1px solid;*/
+	padding: 1%;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.maincontent {
+	margin: 1% 0;
+	padding: 3% 0;
+}
+
+.tbl-full {
+	width:100%;
+}
+.tbl-third {
+	width: 30%;
+}
+table tr th {
+	border-bottom: solid;
+	padding: 1%;
+	text-align: left;
+}
+table tr td {
+	padding: 1%;
+}
+
+.btn-primary {
+	background-color: #1e90ff;
+	padding: 1%;
+	color: #f2f2ff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.btn-primary:hover{
+	background-color: #3743fa;
+}
+
+.btn-secondary {
+	background-color: #7bed9f;
+	padding: 1%;
+	color: #770737;
+	text-decoration: none;
+	font-weight: bold;
+}
+.btn-secondary:hover{
+	background-color: #2ed573;
+}
+
+.btn-tertiary {
+	background-color: #ff6b81;
+	padding: 1%;
+	color: #f2f2ff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.btn-tertiary:hover{
+	background-color: #ff4757;
+}
+
+.success{
+	color: green;
+}
+
+.error{
+	color: red;
+}
+
+.welcome
+{
+	width: 100%;
+	margin-top: 100px;
+	padding-left: 50px;
+}
+
+.welcome h1
+{
+	text-align: center;
+}
+
